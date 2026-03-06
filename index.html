@@ -11,36 +11,64 @@
 </head>
 <body> 
 
-    <main>
+        <div class="app">
 
-        <div class="dashboard">
-             <div class="sidebar">
+            <aside class="sidebar">
 
-                <div class="side-header">
-                  <div class="side-top-logo">logo</div>
-                    <div class="screen-out">
-                        <button><i data-lucide="minimize-2"></i></button>
+                <div class="sidebar-header">
+
+                   <a href="/" class="logo">
+                     <img src="logo.svg" alt="main-logo">
+                  </a>
+
+                  <div class="header-panel">
+                       <i data-lucide="panel-right" class="sidebar-toggle"></i>
                     </div>
-               </div>
-                       <hr></hr>
 
-                      <nav class="side-nav">
-                         <ul class="side-menu">
-                            <li><a href="#"><i data-lucide="user"></i>Profile</a></li>
-                            <li><a href="#"><i data-lucide="calendar-days"></i>Calender</a></li>
-                            <li><a href="#"><i data-lucide="folder-open-dot"></i>Projects</a></li>
-                            <li><a href="#"><i data-lucide="notebook-pen"></i>Notes</a></li>
-                            <li><a href="#"><i data-lucide="users"></i>Teams</a></li>
-                         </ul>
-                     </nav>
+                </div>
+
+                <hr>
+
+                <div class="menu-section">
+                    <button class="menu-section-toggle">Pre-Settings
+                            <i data-lucide="chevron-down" class="menu-toggle-icon"></i>
+                    </button>
                  </div>
 
-            <div class="main-content"></div>
+                    <nav class="sidebar-nav user-nav">
+                        <ul class="sidebar-menu">
+                            <li><a href="#"><i data-lucide="user-round" class="menu-icon"></i>Profile</a></li>
+                            <li><a href="#"><i data-lucide="calendar-days" class="menu-icon"></i>Calendar</a></li>
+                            <li><a href="#"><i data-lucide="settings" class="menu-icon"></i>Settings</a></li>
+                        </ul>
+                    </nav>
 
+                 <hr>
 
+                 <div class="menu-section">
+                    <button class="menu-section-toggle">Workspace
+                            <i data-lucide="chevron-down" class="menu-toggle-icon"></i>
+                    </button>
+                 </div>
+
+                    <nav class="sidebar-nav project-nav">
+                        <ul class="sidebar-menu">
+                            <li><a href="#"><i data-lucide="folder-open-dot" class="menu-icon"></i>Project</a></li>
+                            <li><a href="#"><i data-lucide="pencil-line" class="menu-icon"></i>Notes</a></li>
+                        </ul>
+                    </nav>
+
+            </aside>
+
+            <main class="main-content">
+
+            </main>
+
+            
         </div>
+
         
-     </main>
+
 
      <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
      <script> lucide.createIcons(); </script>
