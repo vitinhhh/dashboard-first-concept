@@ -106,13 +106,10 @@ hr {
     height: auto;
 }
 
-.user-nav {
+.user-nav, .project-nav {
     padding-bottom: 10px;
 }
 
-.project-nav {
-    
-}
 
 .sidebar-menu {
     list-style: none;
@@ -139,3 +136,94 @@ hr {
 }
 
 
+/* Main-Content */
+
+.main-content {
+    padding: 55px 20px;
+}
+
+/* calendar */
+
+h1 {
+    font-size: 15px;
+}
+
+h2 {
+    font-size: 10px;
+    color: #575757;
+}
+
+.calendar-card {
+    width: 260px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2A2828;
+}
+
+.calendar {
+    width: 100%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.calendar-header-titles {
+    flex-direction: column;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.calendar-weekdays span {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.calendar-days {
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   gap: 6px;
+}
+
+.day {
+   background-color: #3E3E3D;
+   padding: 8px;
+   height: auto;
+   border-radius: 6px;
+   text-align: center;
+   font-weight: bold;
+   color: #ffffff;
+   font-size: 10px;
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+.day:hover {
+    background-color: #239b51;
+}
+
+.calendar-header-buttons {
+    cursor: pointer;
+}
+
+
+/* teste */
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}

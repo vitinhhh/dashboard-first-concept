@@ -30,16 +30,15 @@
                 <hr>
 
                 <div class="menu-section">
-                    <button class="menu-section-toggle">Pre-Settings
+                    <button class="menu-section-toggle">Account
                             <i data-lucide="chevron-down" class="menu-toggle-icon"></i>
                     </button>
                  </div>
 
                     <nav class="sidebar-nav user-nav">
                         <ul class="sidebar-menu">
-                            <li><a href="#"><i data-lucide="user-round" class="menu-icon"></i>Profile</a></li>
-                            <li><a href="#"><i data-lucide="calendar-days" class="menu-icon"></i>Calendar</a></li>
-                            <li><a href="#"><i data-lucide="settings" class="menu-icon"></i>Settings</a></li>
+                            <li><a href="#" data-page="profile"><i data-lucide="user-round" class="menu-icon"></i>Profile</a></li>
+                            <li><a href="#" data-page="settings"><i data-lucide="settings" class="menu-icon"></i>Settings</a></li>
                         </ul>
                     </nav>
 
@@ -53,14 +52,97 @@
 
                     <nav class="sidebar-nav project-nav">
                         <ul class="sidebar-menu">
-                            <li><a href="#"><i data-lucide="folder-open-dot" class="menu-icon"></i>Project</a></li>
-                            <li><a href="#"><i data-lucide="pencil-line" class="menu-icon"></i>Notes</a></li>
+                            <li><a href="#" data-page="projects"><i data-lucide="folder-open-dot" class="menu-icon"></i>Project</a></li>
+                            <li><a href="#" data-page="notes"><i data-lucide="pencil-line" class="menu-icon"></i>Notes</a></li>
+                        </ul>
+                    </nav>
+
+                     
+                  <hr>
+
+                    <div class="menu-section">
+                        <button class="menu-section-toggle">Main
+                            <i data-lucide="chevron-down" class="menu-toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <nav class="sidebar-nav main-nav">
+                        <ul class="sidebar-menu">
+                            <li><a href="#"><i data-lucide="clipboard-pen" class="menu-icon"></i>Tasks</a></li>
+                            <li><a href="#"><i data-lucide="calendar-days" class="menu-icon"></i>Calendar</a></li>
                         </ul>
                     </nav>
 
             </aside>
 
             <main class="main-content">
+                  
+        <div class="calendar-card">
+             <div class="calendar">
+                  <div class="calendar-header">
+                    <div class="calendar-header-titles">
+                           <h1>March' 2026</h1>
+                           <h2>Today: Tue, 10</h2>
+                        </div>
+                       <div class="calendar-header-buttons">
+                              <i data-lucide="chevron-left"></i>
+                              <i data-lucide="chevron-right"></i>
+                         </div>
+                      </div>
+                 
+
+                 <div class="calendar-weekdays">
+                      <span>Sun</span>
+                      <span>Mon</span>
+                      <span>Tue</span>
+                      <span>Wed</span>
+                      <span>Thu</span>
+                      <span>Fri</span>
+                      <span>Sat</span>
+                 </div>
+
+                 <div class="calendar-days">
+                    <div class="day">28</div>
+                    <div class="day">29</div>
+                    <div class="day">30</div>
+                    <div class="day">31</div>
+                    <div class="day">1</div> 
+                    <div class="day">2</div> 
+                    <div class="day">3</div> 
+                    <div class="day">4</div> 
+                    <div class="day">5</div> 
+                    <div class="day">6</div> 
+                    <div class="day">7</div> 
+                    <div class="day">8</div> 
+                    <div class="day">9</div> 
+                    <div class="day">10</div> 
+                    <div class="day">11</div> 
+                    <div class="day">12</div> 
+                    <div class="day">13</div> 
+                    <div class="day">14</div> 
+                    <div class="day">15</div> 
+                    <div class="day">16</div> 
+                    <div class="day">17</div> 
+                    <div class="day">18</div> 
+                    <div class="day">19</div> 
+                    <div class="day">20</div> 
+                    <div class="day">21</div> 
+                    <div class="day">22</div> 
+                    <div class="day">23</div> 
+                    <div class="day">24</div> 
+                    <div class="day">25</div> 
+                    <div class="day">26</div> 
+                    <div class="day">27</div> 
+                    <div class="day">28</div> 
+                    <div class="day">29</div> 
+                    <div class="day">30</div> 
+                    <div class="day">31</div>
+                 </div>
+
+                </div>
+             </div>
+         </div>
+
 
             </main>
 
@@ -68,10 +150,10 @@
         </div>
 
         
-
+     
 
      <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
      <script> lucide.createIcons(); </script>
-
+     
 </body>
 </html>
