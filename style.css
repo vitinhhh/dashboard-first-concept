@@ -5,20 +5,28 @@
     font-family: "Albert Sans", sans-serif;
 }
 
+body {
+    background-color: #212123;
+    font-family: "Albert Sans", sans-serif;
+}
+
                 /* App/Sidebar/Main-Content */
 .app {
     display: grid;
     grid-template-columns: 240px 1fr;
+    transition: all 0.3s ease-in-out;
     height: 100vh;
 }
 
 .sidebar {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     background-color: #1B1B1D;
     height: 100vh;
     overflow-y: auto;
     padding: 0 12px;
+    
     
 }
 
@@ -38,13 +46,14 @@ hr {
 
 .logo {
     width: 36px;
-    height: 36px;
+    height: auto;
     display: flex;
     cursor: pointer;
+    padding: 8px;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    transition: background  .2s;
+    transition: background 0.2s;
 }
 
 .logo:hover {
@@ -53,29 +62,69 @@ hr {
 
 .header-panel {
     width: 36px;
-    height: 36px;
+    height: auto;
     display: flex;
-    cursor: e-resize;
     justify-content: center;
-    align-items: center;
     border-radius: 8px;
-    transition: background  .2s;
+    transition: background  0.2s;
 }
 
 .header-panel:hover {
-    background: #252525;
+    background: #312f2f;
 }
 
 
                  /* Sidebar */
 
+.app:has(.sidebar.collapsed) {
+    grid-template-columns: 60px 1fr;
+
+}
+
+.sidebar.collapsed .logo{
+    display: none;
+}
+
+.sidebar.collapsed .menu-section {
+    display: none;
+}
+
+.sidebar-collapsed .sidebar-trigger{
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar.collapsed {
+    cursor: e-resize;
+}
+
+
+.sidebar.collapsed .sidebar-menu a{
+    padding: 8px 0;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed .label-text {
+    display: none;
+}
+
+.sidebar.collapsed hr{
+    display: none;
+}
+
+
 .sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0px;  
+    padding: 16px 0px;  
 }
-
 
 .sidebar::-webkit-scrollbar {
     width: 6px;
@@ -121,16 +170,13 @@ hr {
     height: auto;
 }
 
-.user-nav, .project-nav {
-    padding-bottom: 10px;
-}
 
 
 .sidebar-menu {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    
 }
 
 .sidebar-menu a{
@@ -153,95 +199,29 @@ hr {
 
 /* Main-Content */
 
-.main-content {
-    padding: 55px 20px;
-}
 
-/* calendar */
 
-h1 {
-    font-size: 15px;
-}
 
-h2 {
-    font-size: 10px;
-    color: #575757;
-}
+/* testes */
 
-.calendar-card {
-    width: 260px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #2A2828;
-}
-
-.calendar {
-    width: 100%;
-}
-
-.calendar-header {
+.sidebar-trigger {
     display: flex;
-    justify-content: space-between;
+    cursor: e-resize;
+    justify-content: center;
     align-items: center;
-    color: #ffffff;
-    margin-bottom: 10px;
+    background-color: transparent;
+    padding: 8px;
+    border: none;
+    
 }
 
-.calendar-header-titles {
-    flex-direction: column;
-}
-
-.calendar-weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 6px;
-}
-
-.calendar-weekdays span {
-    text-align: center;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #ffffff;
-}
-
-.calendar-days {
-   display: grid;
-   grid-template-columns: repeat(7, 1fr);
-   gap: 6px;
-}
-
-.day {
-   background-color: #3E3E3D;
-   padding: 8px;
-   height: auto;
-   border-radius: 6px;
-   text-align: center;
-   font-weight: bold;
-   color: #ffffff;
-   font-size: 10px;
-   cursor: pointer;
-   transition: 0.2s;
-}
-
-.day:hover {
-    background-color: #239b51;
-}
-
-.calendar-header-buttons {
-    cursor: pointer;
-}
-
-
-/* teste */
-
-.page {
-    display: none;
-}
-
-.page.active {
+.sidebar-trigger svg {
     display: block;
+    width: 20px;
+    height: auto;
+    color: #fafafa;
 }
 
-/* settings page */
-
+.icon-default {
+    pointer-events: none;
+}

@@ -13,16 +13,20 @@
 
         <div class="app">
 
-            <aside class="sidebar">
+            <aside class="sidebar" id="sidebar">
 
                 <div class="sidebar-header">
 
+              
                    <a href="/" class="logo">
                      <img src="logo.svg" alt="main-logo">
                   </a>
+                
 
                   <div class="header-panel">
-                       <i data-lucide="panel-right" class="sidebar-toggle"></i>
+                      <button class="sidebar-trigger" id="sidebar-trigger">
+                          <i data-lucide="panel-right" class="icon-default"></i>
+                       </button>
                     </div>
 
                 </div>
@@ -37,8 +41,19 @@
 
                     <nav class="sidebar-nav user-nav">
                         <ul class="sidebar-menu">
-                            <li><a href="#" data-page="profile"><i data-lucide="user-round" class="menu-icon"></i>Profile</a></li>
-                            <li><a href="javascript:void(0)" data-page="settings" onclick="showPage('settings')"><i data-lucide="settings" class="menu-icon"></i>Settings</a></li>
+                            <li>
+                                <a href="#" data-page="profile">
+                                    <i data-lucide="user-round" class="menu-icon"></i>
+                                    <span class="label-text">Profile</span> 
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-page="settings">
+                                    <i data-lucide="settings" class="menu-icon"></i>
+                                    <span class="label-text">Settings</span>
+                                </a>
+                            </li>     
                         </ul>
                     </nav>
 
@@ -52,10 +67,33 @@
 
                     <nav class="sidebar-nav project-nav">
                         <ul class="sidebar-menu">
-                            <li><a href="#" data-page="projects"><i data-lucide="folder-open-dot" class="menu-icon"></i>Project</a></li>
-                            <li><a href="#" data-page="notes"><i data-lucide="pencil-line" class="menu-icon"></i>Notes</a></li>
-                            <li><a href="#"><i data-lucide="clipboard-pen" class="menu-icon"></i>Tasks</a></li>
-                            <li><a href="#"><i data-lucide="calendar-days" class="menu-icon"></i>Calendar</a></li>
+                            <li>
+                                <a href="#" data-page="projects">
+                                    <i data-lucide="folder-open-dot" class="menu-icon"></i>
+                                    <span class="label-text">Project</span> 
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-page="notes">
+                                    <i data-lucide="pencil-line" class="menu-icon"></i>
+                                    <span class="label-text">Notes</span> 
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-page="tasks">
+                                    <i data-lucide="clipboard-pen" class="menu-icon"></i>
+                                    <span class="label-text">Tasks</span> 
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-page="calendar">
+                                    <i data-lucide="calendar" class="menu-icon"></i>
+                                    <span class="label-text">Calendar</span> 
+                                </a>
+                            </li>
                         </ul>
                     </nav>
 

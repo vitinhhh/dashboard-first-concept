@@ -1,16 +1,18 @@
-function showPage(pageId, element) {
+const sidebar = document.getElementById("sidebar");
+const trigger = document.getElementById("sidebar-trigger");
 
-  const pages = document.querySelectorAll('.page');
-  pages.forEach(page => page.classList.remove('active'));
+trigger.addEventListener("click", (event) => {
+    event.stopPropagation(); 
+    sidebar.classList.toggle("collapsed");
+});
 
-  
-  document.getElementById(pageId).classList.add('active');
+sidebar.addEventListener("click", (event) => {
 
-  
-  const links = document.querySelectorAll('.sidebar-nav a');
-  links.forEach(link => link.classList.remove('menu-active'));
-  
-  if(element) {
-    element.classList.add('menu-active');
-  }
-}
+    if   (event.target.closest("a")) {
+        return;
+    }
+
+    if (sidebar.classList.contains("collapsed")) {
+        sidebar.classList.remove("collapsed");
+    }
+});
