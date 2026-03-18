@@ -16,3 +16,20 @@ sidebar.addEventListener("click", (event) => {
         sidebar.classList.remove("collapsed");
     }
 });
+
+const modal = document.getElementById("settingsModal");
+const btnOpen = document.getElementById("openSettingsBtn");
+const btnClose = document.getElementById("closeSettingsBtn");
+
+btnOpen.addEventListener("click", (e) => {
+     e.preventDefault();
+     modal.classList.toggle("is-open");
+});
+
+const closeModal = () => modal.classList.remove("closeSettingsBtn");
+
+btnClose.onclick = closeModal;
+
+window.onclick = (event) => {
+    if (event.target == modal) closeModal();
+};

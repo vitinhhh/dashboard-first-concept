@@ -225,3 +225,87 @@ hr {
 .icon-default {
     pointer-events: none;
 }
+
+/* Settings-Modal */
+
+.Modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3 ease, visibility 0.3 ease;
+}
+
+.Modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content-main{
+    background-color: #fff;
+    margin: 15vh auto;  
+    padding: 25px;
+    border-radius: 20px;
+    width: 350px;
+    transform: scale(0.8) translateY(-20px);
+}
+
+.Modal.is-open  .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+
+.modal-content-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content-main {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    margin: 5% auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.modal-sidebar {
+    display: flex;
+    background-color: #4f7397;
+    flex: 0 0 250px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.modal-nav-item {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.modal-body {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    background-color: red;
+    overflow-y: auto;
+}
+
+
+
+
+
+
+

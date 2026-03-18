@@ -49,16 +49,18 @@
                             </li>
 
                             <li>
-                                <a href="#" data-page="settings">
+                        
+                                 <a href="javascript:void(0)"  id="openSettingsBtn" class="openSettings">
                                     <i data-lucide="settings" class="menu-icon"></i>
                                     <span class="label-text">Settings</span>
-                                </a>
-                            </li>     
+                                  </a>
+
+                           </li>     
                         </ul>
                     </nav>
 
                  <hr>
-
+                    
                  <div class="menu-section">
                     <button class="menu-section-toggle">Workspace
                             <i data-lucide="chevron-down" class="menu-toggle-icon"></i>
@@ -96,6 +98,33 @@
                             </li>
                         </ul>
                     </nav>
+
+
+                         <div id="settingsModal"class="Modal">
+                               <div class="modal-content-main">
+
+                                <aside class="modal-sidebar">
+                                    <div class="modal-sidebar-header">
+                                        <h2>Settings</h2>
+                                    
+                                 <nav class="modal.sidebar-nav">
+                                    <button class="modal-nav-item">Visual</button>
+                                    <button class="modal-nav-item">Notifications</button>
+                                    <button class="modal-nav-item">Outro</button>
+                                 </nav>
+                                </aside>
+
+                                 <section class="modal-body">
+                                    <header class="modal-body-header">
+                                       <button class="closeSettingsBtn">&times;</button>
+                                    </header>
+      
+                                    <div class="settings-content">
+                                      <h3>Theme</h3>
+                                       <p>something</p>
+                                   </div>
+                                 </section>
+                             </div>
 
             </aside>
 
